@@ -36,11 +36,15 @@ namespace Methods
             //int age = int.Parse(Console.ReadLine());
             //Console.WriteLine("You have {0} years to go.", RetirementCalculator(age));
 
-            double hoursWorked = 42.3d;
-            double hourlyWage = 12.50;
+            //double hoursWorked = 42.3d;
+            //double myWage = 12.50;
 
-            Console.WriteLine("Your monthly wage: {0}",WageCalculator(hoursWorked, hourlyWage));
-
+            //Console.WriteLine("Your monthly wage: {0}",WageCalculator(hoursWorked, myWage));
+            Console.WriteLine("Tell me your name and I'll assigne you a color.");
+            string name = Console.ReadLine();
+            int number = name.Length;
+            string asighnedColor ="";
+            Console.WriteLine("Hi {0}, you color is {1}.",name, WhatColor(number, asighnedColor));
         }
         //Method header
         // public static int Add(int firstNumber, int secondNumber)
@@ -73,23 +77,36 @@ namespace Methods
         //    return vehicleOfFortune;
         //}
 
-        public static void FavoriteFood()
-        {
-            string name = "Shawn";
-            string food = "pizza";
-            Console.WriteLine("Hi {0}, I have some {1}.", name, food);
-            return;
+        //public static void FavoriteFood()
+        //{
+        //    string name = "Shawn";
+        //    string food = "pizza";
+        //    Console.WriteLine("Hi {0}, I have some {1}.", name, food);
+        //    return;
 
-        }
-        public static int RetirementCalculator(int age)
+        //}
+        //public static int RetirementCalculator(int age)
+        //{
+        //    age = 65 - age;
+        //    return age;
+        //}
+        //public static double WageCalculator (double hoursWorkedWeekly, double hourlyWage)
+        //{
+        //    double monthlyWage = (hoursWorkedWeekly * 52 * hourlyWage) / 12;
+        //    return monthlyWage; 
+        //}
+
+        public static string WhatColor(int number, string color)
         {
-            age = 65 - age;
-            return age;
-        }
-        public static double WageCalculator (double hoursWorkedWeekly, double hourlyWage)
-        {
-            double monthlyWage = (hoursWorkedWeekly * 52 * hourlyWage);
-            return monthlyWage; 
+            if (number % 2 == 0)
+            {
+                color = "Green";
+            }
+            else
+            {
+                color = "Red";
+            }
+            return color;
         }
     }
 }
