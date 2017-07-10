@@ -88,7 +88,7 @@ namespace Methods
         }
         public static double WageCalculator (double hoursWorkedWeekly, double hourlyWage)
         {
-            double monthlyWage = (hoursWorkedWeekly * 52 * hourlyWage) / 12;
+            double monthlyWage = (hoursWorkedWeekly * 52 * hourlyWage);
             return monthlyWage; 
         }
     }
