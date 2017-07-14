@@ -108,5 +108,28 @@ namespace Methods
             }
             return color;
         }
-    }
+
+        int adjacentElementsProduct(int[] inputArray)
+        {
+
+            {
+                int big = Int32.MinValue;
+                for (int i = 0; i < inputArray.Length - 1; i++)
+                {
+                    int product = inputArray[i] * inputArray[i + 1];
+                    if (big < product)
+                    {
+                        big = product;
+                    }
+                }
+                return big;
+            }
+        }
+
+        int shapeArea(int n)
+        {
+            int area = n * (2 * n - 2) + 1;
+            return area;
+        }
+
 }
